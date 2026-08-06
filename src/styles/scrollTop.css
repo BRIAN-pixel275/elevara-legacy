@@ -1,0 +1,44 @@
+/* ===========================
+   Scroll To Top Button
+=========================== */
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 55px;
+  height: 55px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: #C9A227;
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+
+  transition: all 0.3s ease;
+
+  z-index: 1000;
+}
+
+.scroll-top:hover {
+  transform: translateY(-5px);
+  background: #b89120;
+}
+
+@media (max-width: 768px) {
+  .scroll-top {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+}

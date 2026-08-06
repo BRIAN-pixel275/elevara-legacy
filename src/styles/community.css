@@ -1,0 +1,711 @@
+/* ===================================
+   Community Hero
+=================================== */
+
+.community-hero{
+
+    background:#F9F5EF;
+
+    padding:140px 40px;
+
+    text-align:center;
+
+}
+
+.community-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.community-hero h1{
+
+    font-size:64px;
+
+    color:#2C2C2C;
+
+    margin:25px 0;
+
+}
+
+.community-hero p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:#666;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+.community-hero{
+
+    padding:100px 25px;
+
+}
+
+.community-hero h1{
+
+    font-size:42px;
+
+}
+
+.community-hero p{
+
+    font-size:17px;
+
+}
+
+}
+
+/* ===================================
+   Why Join Community
+=================================== */
+
+.community-benefits{
+
+    padding:120px 40px;
+
+    background:white;
+
+}
+
+.benefits-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+.benefit-card{
+
+    background:#F9F5EF;
+
+    padding:45px 35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid transparent;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+}
+
+.benefit-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#C9A227;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.benefit-icon{
+
+    font-size:52px;
+
+    color:#C9A227;
+
+    margin-bottom:25px;
+
+}
+
+.benefit-card h3{
+
+    font-size:28px;
+
+    margin-bottom:18px;
+
+    color:#2C2C2C;
+
+}
+
+.benefit-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+    font-size:16px;
+
+}
+
+@media(max-width:768px){
+
+.community-benefits{
+
+    padding:80px 25px;
+
+}
+
+}
+
+/* ===================================
+   Community Pillars
+=================================== */
+
+.community-pillars{
+    padding:120px 40px;
+    background:#F9F5EF;
+}
+
+.pillar-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+    margin-top:80px;
+}
+
+.pillar-row.reverse{
+    direction:rtl;
+}
+
+.pillar-row.reverse > *{
+    direction:ltr;
+}
+
+.pillar-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:24px;
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+}
+
+.pillar-content span{
+    display:inline-block;
+    font-size:15px;
+    font-weight:700;
+    color:#C9A227;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.pillar-content h3{
+    font-size:42px;
+    margin-bottom:20px;
+    color:#2C2C2C;
+}
+
+.pillar-content p{
+    color:#666;
+    line-height:1.9;
+    margin-bottom:25px;
+    font-size:17px;
+}
+
+.pillar-content ul{
+    list-style:none;
+    padding:0;
+}
+
+.pillar-content li{
+    margin-bottom:15px;
+    font-size:17px;
+    color:#2C2C2C;
+}
+
+@media(max-width:900px){
+
+    .pillar-row{
+        grid-template-columns:1fr;
+    }
+
+    .pillar-row.reverse{
+        direction:ltr;
+    }
+
+    .pillar-image img{
+        height:320px;
+    }
+
+    .pillar-content h3{
+        font-size:32px;
+    }
+
+}
+/* ===================================
+   Member Journey Timeline
+=================================== */
+
+.member-journey{
+    padding:120px 40px;
+    background:#ffffff;
+}
+
+.timeline{
+    position:relative;
+    max-width:850px;
+    margin:70px auto 0;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:35px;
+    top:0;
+    bottom:0;
+    width:4px;
+    background:#C9A227;
+}
+
+.timeline-item{
+    position:relative;
+    display:flex;
+    gap:35px;
+    margin-bottom:60px;
+}
+
+.timeline-icon{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:#C9A227;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    flex-shrink:0;
+    z-index:2;
+}
+
+.timeline-content{
+    background:#F9F5EF;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+    flex:1;
+}
+
+.timeline-content h3{
+    margin-bottom:15px;
+    font-size:26px;
+    color:#2C2C2C;
+}
+
+.timeline-content p{
+    color:#666;
+    line-height:1.8;
+}
+
+@media(max-width:768px){
+
+.member-journey{
+    padding:80px 25px;
+}
+
+.timeline::before{
+    left:30px;
+}
+
+.timeline-item{
+    gap:20px;
+}
+
+.timeline-icon{
+    width:60px;
+    height:60px;
+    font-size:24px;
+}
+
+.timeline-content h3{
+    font-size:22px;
+}
+
+}
+
+/* ===================================
+   Success Stories
+=================================== */
+
+.success-stories{
+    padding:120px 40px;
+    background:#F9F5EF;
+}
+
+.stories-grid{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.story-card{
+    background:white;
+    padding:35px;
+    border-radius:24px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    transition:.3s;
+}
+
+.story-card:hover{
+    transform:translateY(-10px);
+}
+
+.story-card img{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:25px;
+    border:4px solid #C9A227;
+}
+
+.story-text{
+    font-style:italic;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+.story-card h3{
+    font-size:24px;
+    margin-bottom:8px;
+    color:#2C2C2C;
+}
+
+.story-card span{
+    color:#C9A227;
+    font-weight:600;
+}
+
+@media(max-width:768px){
+
+.success-stories{
+    padding:80px 25px;
+}
+
+}
+
+/* ===================================
+   Volunteer Section
+=================================== */
+
+.volunteer-section{
+
+    padding:120px 40px;
+
+    background:white;
+
+}
+
+.volunteer-grid{
+
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+}
+
+.volunteer-card{
+
+    background:#F9F5EF;
+
+    padding:45px 35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+    transition:.35s;
+
+    border:1px solid transparent;
+
+}
+
+.volunteer-card:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#C9A227;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+}
+
+.volunteer-icon{
+
+    font-size:50px;
+
+    color:#C9A227;
+
+    margin-bottom:25px;
+
+}
+
+.volunteer-card h3{
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+    color:#2C2C2C;
+
+}
+
+.volunteer-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+.volunteer-section{
+
+    padding:80px 25px;
+
+}
+
+}
+
+/* ===================================
+   Community Gallery
+=================================== */
+
+.community-gallery{
+    padding:120px 40px;
+    background:#F9F5EF;
+}
+
+.gallery-grid{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.gallery-item img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+    transition:transform .5s ease;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+}
+
+.gallery-overlay{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:25px;
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.15),
+        transparent
+    );
+    color:white;
+}
+
+.gallery-overlay h3{
+    font-size:22px;
+    font-weight:600;
+}
+
+@media(max-width:992px){
+
+.gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.community-gallery{
+    padding:80px 25px;
+}
+
+.gallery-grid{
+    grid-template-columns:1fr;
+}
+
+.gallery-item img{
+    height:260px;
+}
+
+.gallery-overlay h3{
+    font-size:20px;
+}
+
+}
+
+/* ===================================
+   Join Community CTA
+=================================== */
+
+.join-community{
+
+    padding:120px 40px;
+
+    background:linear-gradient(135deg,#C9A227,#D8B64B);
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.join-community .community-container{
+
+    max-width:850px;
+
+    margin:auto;
+
+}
+
+.join-community .section-tag{
+
+    background:rgba(255,255,255,.2);
+
+    color:white;
+
+}
+
+.join-community h2{
+
+    font-size:56px;
+
+    margin:25px 0;
+
+}
+
+.join-community p{
+
+    font-size:19px;
+
+    line-height:1.9;
+
+    margin-bottom:45px;
+
+}
+
+.join-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.primary-btn{
+
+    background:white;
+
+    color:#C9A227;
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.secondary-btn{
+
+    border:2px solid white;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:white;
+
+    color:#C9A227;
+
+}
+
+@media(max-width:768px){
+
+.join-community{
+
+    padding:80px 25px;
+
+}
+
+.join-community h2{
+
+    font-size:40px;
+
+}
+
+.join-community p{
+
+    font-size:17px;
+
+}
+
+.join-buttons{
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+}
