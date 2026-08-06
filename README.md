@@ -8,9 +8,6 @@ The website features a clean, elegant design with a focus on accessibility, resp
 
 ## 🌍 Live Demo
 
-> Add your deployed website URL here after deployment.
-
-Example:
 
 ```
 https://elevaralegacy.vercel.app
@@ -20,7 +17,6 @@ https://elevaralegacy.vercel.app
 
 # 📸 Preview
 
-> Add screenshots of the website here.
 
 ### Home Page
 
@@ -48,7 +44,7 @@ https://elevaralegacy.vercel.app
 
 ---
 
-# ✨ Features
+#  Features
 
 - Modern responsive design
 - Elegant UI/UX
@@ -113,7 +109,7 @@ src/
 Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/elevara-legacy.git
+git clone https://github.com/BRIAN-pixel275/elevara-legacy.git
 ```
 
 Move into the project
@@ -148,7 +144,7 @@ npm run preview
 
 ---
 
-# 📱 Responsive Design
+#  Responsive Design
 
 The website is optimized for:
 
@@ -159,7 +155,7 @@ The website is optimized for:
 
 ---
 
-# 🎨 Color Palette
+#  Color Palette
 
 | Color | Hex |
 |--------|------|
@@ -193,7 +189,7 @@ The website is optimized for:
 
 ---
 
-# ⚡ Performance
+# Performance
 
 - Built with Vite
 - Optimized component structure
@@ -203,7 +199,7 @@ The website is optimized for:
 
 ---
 
-# 🔮 Future Improvements
+#  Future Improvements
 
 - EmailJS contact form integration
 - Scroll animations
@@ -216,17 +212,17 @@ The website is optimized for:
 
 ---
 
-# 👨‍💻 Developer
+#  Developer
 
 **Brian Muchiru**
 
 - GitHub: https://github.com/BRIAN-pixel275
-- LinkedIn: *(Add your LinkedIn p)*
-- Email: *(Add your email address)*
+- LinkedIn: https://www.linkedin.com/in/brian-muchiru-b0b057356/
+- Email: brayo2933@gmail.com
 
 ---
 
-# 📜 License
+#  License
 
 This project was developed for **Elevara Legacy**.
 
