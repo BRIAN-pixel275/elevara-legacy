@@ -19,11 +19,12 @@ import "./styles/testimonials.css";
 import "./styles/cta.css";
 import "./styles/footer.css";
 import "./styles/faq.css";
-import "./styles/homePrograms.css";
+import "./styles/homeprograms.css";
 import "./styles/community.css";
 import "./styles/events-page.css";
 import "./styles/contact.css";
 import "./styles/scrollTop.css";
+
 
 
 AOS.init({
