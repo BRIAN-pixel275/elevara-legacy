@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function ProgramsSection() {
 
     const programs = [
@@ -70,9 +71,12 @@ function ProgramsSection() {
 
                                 <p>{program.description}</p>
 
-                                <button>
-                                    Learn More →
-                                </button>
+                                <Link
+                                    to="/programs"
+                                    className="primary-btn"
+                                >
+                                    Learn More
+                                </Link>
 
                             </div>
 
