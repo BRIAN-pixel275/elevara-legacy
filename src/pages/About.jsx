@@ -8,7 +8,6 @@ import {
   FaCrown,
   FaLightbulb,
   FaGlobeAfrica,
-  FaFlag,
 } from "react-icons/fa";
 import founder from "../assets/images/founder.jpg";
 import FAQ from "../components/sections/FAQ";
@@ -283,106 +282,6 @@ content="Learn about Elevara Legacy, our mission, vision and commitment to empow
     </div>
 
   </div>
-
-</section>
-<section className="timeline">
-
-  <div className="timeline-container">
-
-    <div className="section-header">
-
-      <span className="section-tag">
-        Our Journey
-      </span>
-
-      <h2>
-        Building a Legacy, One Step at a Time
-      </h2>
-
-      <p>
-        Every milestone reflects our commitment to empowering
-        women through education, leadership, financial literacy,
-        and community.
-      </p>
-
-    </div>
-
-    <div className="timeline-wrapper">
-
-      <div className="timeline-item">
-
-        <div className="timeline-icon">
-          <FaFlag />
-        </div>
-
-        <div className="timeline-content">
-          <span>2026</span>
-          <h3>Elevara Legacy Founded</h3>
-          <p>
-            The organization was established with a vision of
-            helping women grow, learn, invest and leave a lasting
-            legacy.
-          </p>
-        </div>
-
-      </div>
-
-      <div className="timeline-item">
-
-        <div className="timeline-icon">
-          <FaFlag />
-        </div>
-
-        <div className="timeline-content">
-          <span>2026</span>
-          <h3>First Women's Empowerment Workshop</h3>
-          <p>
-            Launching workshops focused on financial literacy,
-            leadership development and entrepreneurship.
-          </p>
-        </div>
-
-      </div>
-
-      <div className="timeline-item">
-
-        <div className="timeline-icon">
-          <FaFlag />
-        </div>
-
-        <div className="timeline-content">
-          <span>2027</span>
-          <h3>Mentorship Program</h3>
-          <p>
-            Connecting experienced women leaders with young women
-            seeking guidance in business, careers and personal
-            growth.
-          </p>
-        </div>
-
-      </div>
-
-      <div className="timeline-item">
-
-        <div className="timeline-icon">
-          <FaFlag />
-        </div>
-
-        <div className="timeline-content">
-          <span>Future</span>
-          <h3>Africa-Wide Impact</h3>
-          <p>
-            Expand programs across Africa and empower thousands of
-            women through education, mentorship and leadership.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
 <section className="founder">
 
