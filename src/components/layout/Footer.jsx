@@ -67,8 +67,8 @@ function Footer() {
             <h3>Contact</h3>
 
             <p>Nairobi, Kenya</p>
-            <p>hello@elevaralegacy.org</p>
-            <p>+254 700 000 000</p>
+            <p>elevaralegacy@gmail.com</p>
+            <p>+254 717 532 313</p>
 
             <div className="socials">
 

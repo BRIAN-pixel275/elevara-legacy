@@ -24,6 +24,7 @@ import "./styles/community.css";
 import "./styles/events-page.css";
 import "./styles/contact.css";
 import "./styles/scrollTop.css";
+import "./styles/notfound.css";
 
 
 

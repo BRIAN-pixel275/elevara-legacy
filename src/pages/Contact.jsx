@@ -12,6 +12,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
+    FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
 
@@ -91,7 +92,7 @@ function Contact() {
 
                     <div>
                         <h3>Phone</h3>
-                        <p>+254 700 000 000</p>
+                        <p>+254 717 532 313</p>
                     </div>
 
                 </div>
@@ -102,7 +103,7 @@ function Contact() {
 
                     <div>
                         <h3>Email</h3>
-                        <p>info@elevaralegacy.org</p>
+                        <p>elevaralegacy@gmail.com</p>
                     </div>
 
                 </div>
@@ -213,6 +214,25 @@ function Contact() {
                 <FaLinkedinIn />
                 <h3>LinkedIn</h3>
                 <span>Professional network</span>
+            </a>
+              {/* WhatsApp Channel */}
+
+            <a
+              href="YOUR_WHATSAPP_CHANNEL_LINK"
+              className="social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaWhatsapp />
+
+              <h3>
+                WhatsApp
+              </h3>
+
+              <span>
+                Join our channel
+              </span>
+
             </a>
 
             <a

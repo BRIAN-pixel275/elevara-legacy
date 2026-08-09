@@ -1,0 +1,145 @@
+/* ===================================
+   404 Not Found Page
+=================================== */
+
+.not-found {
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 25px;
+
+    background: #F9F5EF;
+
+    text-align: center;
+}
+
+.not-found-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.not-found-code {
+    display: block;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 120px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: #C9A227;
+
+    margin-bottom: 20px;
+}
+
+.not-found h1 {
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 48px;
+    font-weight: 600;
+
+    color: #2C2C2C;
+}
+
+.not-found p {
+    margin: 0 auto 35px;
+
+    max-width: 550px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: #666;
+}
+
+.not-found-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 14px 32px;
+
+    background: #C9A227;
+    color: #FFFFFF;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.not-found-btn:hover {
+    background: #2C2C2C;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ===================================
+   Responsive
+=================================== */
+
+@media (max-width: 768px) {
+
+    .not-found {
+        min-height: 65vh;
+
+        padding: 80px 20px;
+    }
+
+    .not-found-code {
+        font-size: 90px;
+    }
+
+    .not-found h1 {
+        font-size: 38px;
+    }
+
+    .not-found p {
+        font-size: 16px;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .not-found {
+        padding: 70px 20px;
+    }
+
+    .not-found-code {
+        font-size: 75px;
+    }
+
+    .not-found h1 {
+        font-size: 32px;
+    }
+
+    .not-found p {
+        font-size: 15px;
+    }
+
+    .not-found-btn {
+        width: 100%;
+        max-width: 220px;
+    }
+
+}
