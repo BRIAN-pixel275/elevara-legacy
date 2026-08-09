@@ -22,6 +22,7 @@ import {
   FaRocket,
   FaAward,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Programs() {
   return (
@@ -175,9 +176,12 @@ function Programs() {
 
                 </ul>
 
-                <button className="learn-btn">
-                    Learn More
-                </button>
+                <Link
+                     to="/contact"
+                          className="programs-page-btn"
+                          >
+                                   Learn More
+                          </Link>
 
             </div>
 
@@ -221,9 +225,12 @@ function Programs() {
 
                 </ul>
 
-                <button className="learn-btn">
-                    Learn More
-                </button>
+                <Link
+                     to="/contact"
+                          className="programs-page-btn"
+                          >
+                                   Learn More
+                          </Link>
 
             </div>
 
