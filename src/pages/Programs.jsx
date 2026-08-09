@@ -282,9 +282,12 @@ function Programs() {
 
                 </div>
 
-                <button>
-                    Join This Program
-                </button>
+                 <Link
+                     to="/contact"
+                          className="programs-page-btn"
+                          >
+                                   Join This program
+                          </Link>
 
             </div>
 
@@ -326,9 +329,12 @@ function Programs() {
 
                 </div>
 
-                <button>
-                    Join This Program
-                </button>
+                 <Link
+                     to="/contact"
+                          className="programs-page-btn"
+                          >
+                                   Join This program
+                          </Link>
 
             </div>
 
@@ -367,9 +373,12 @@ function Programs() {
 
                 </div>
 
-                <button>
-                    Join This Program
-                </button>
+                <Link
+                     to="/contact"
+                          className="programs-page-btn"
+                          >
+                                   Join This program
+                          </Link>
 
             </div>
 
