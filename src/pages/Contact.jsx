@@ -6,33 +6,31 @@ import {
   FaPhoneAlt,
   FaEnvelope,
   FaClock,
-} from "react-icons/fa";
-
-import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-    FaWhatsapp,
+  FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
 
 function Contact() {
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Contact Us | Elevara Legacy</title>
-        <meta
-            name="description"
-            content="Get in touch with Elevara Legacy. Have questions, want to partner with us, or need more information? We're here to help."
-        />
-    </Helmet>
 
-      {/* Hero */}
+        <meta
+          name="description"
+          content="Get in touch with Elevara Legacy. Have questions, want to partner with us, or need more information? We're here to help."
+        />
+      </Helmet>
+
+      {/* =========================
+          HERO
+      ========================= */}
 
       <section className="contact-hero">
-
         <div className="contact-container">
-
           <span className="section-tag">
             Contact Us
           </span>
@@ -42,180 +40,241 @@ function Contact() {
           </h1>
 
           <p>
-            Whether you have a question, want to partner with us, become a
-            volunteer or join our community, our team is here to help.
+            Whether you have a question, want to partner with us,
+            become a volunteer or join our community, our team is
+            here to help.
           </p>
-
         </div>
-
       </section>
-      {/* Contact Section */}
 
-<section className="contact-section">
+      {/* =========================
+          CONTACT SECTION
+      ========================= */}
 
-    <div className="contact-container">
+      <section className="contact-section">
+        <div className="contact-container">
 
-        <div className="contact-grid">
+          <div className="contact-grid">
 
-            {/* Contact Info */}
+            {/* CONTACT INFO */}
 
             <div className="contact-info">
 
-                <span className="section-tag">
-                    Get In Touch
-                </span>
+              <span className="section-tag">
+                Get In Touch
+              </span>
 
-                <h2>
-                    Let's Start a Conversation
-                </h2>
+              <h2>
+                Let's Start a Conversation
+              </h2>
 
-                <p>
-                    We'd love to hear from you. Whether you're interested in our
-                    programs, partnerships, volunteering or have general
-                    inquiries, feel free to reach out.
-                </p>
+              <p>
+                We'd love to hear from you. Whether you're interested
+                in our programs, partnerships, volunteering or have
+                general inquiries, feel free to reach out.
+              </p>
 
-                <div className="contact-item">
+              {/* Location */}
 
-                    <FaMapMarkerAlt className="contact-icon"/>
+              <div className="contact-item">
 
-                    <div>
-                        <h3>Location</h3>
-                        <p>Nairobi, Kenya</p>
-                    </div>
+                <FaMapMarkerAlt className="contact-icon" />
 
+                <div>
+                  <h3>Location</h3>
+                  <p>Nairobi, Kenya</p>
                 </div>
 
-                <div className="contact-item">
+              </div>
 
-                    <FaPhoneAlt className="contact-icon"/>
+              {/* Phone */}
 
-                    <div>
-                        <h3>Phone</h3>
-                        <p>+254 717 532 313</p>
-                    </div>
+              <div className="contact-item">
 
+                <FaPhoneAlt className="contact-icon" />
+
+                <div>
+                  <h3>Phone</h3>
+                  <p>+254 717 532 313</p>
                 </div>
 
-                <div className="contact-item">
+              </div>
 
-                    <FaEnvelope className="contact-icon"/>
+              {/* Email */}
 
-                    <div>
-                        <h3>Email</h3>
-                        <p>elevaralegacy@gmail.com</p>
-                    </div>
+              <div className="contact-item">
 
+                <FaEnvelope className="contact-icon" />
+
+                <div>
+                  <h3>Email</h3>
+                  <p>elevaralegacy@gmail.com</p>
                 </div>
 
-                <div className="contact-item">
+              </div>
 
-                    <FaClock className="contact-icon"/>
+              {/* Office Hours */}
 
-                    <div>
-                        <h3>Office Hours</h3>
-                        <p>Monday – Friday | 8:00 AM – 5:00 PM</p>
-                    </div>
+              <div className="contact-item">
 
+                <FaClock className="contact-icon" />
+
+                <div>
+                  <h3>Office Hours</h3>
+                  <p>
+                    Monday – Friday | 8:00 AM – 5:00 PM
+                  </p>
                 </div>
+
+              </div>
 
             </div>
 
-            {/* Contact Form */}
+            {/* =========================
+                CONTACT FORM
+            ========================= */}
 
             <div className="contact-form">
 
-                <form>
+              <form
+                action="https://formspree.io/f/mzeprkqv"
+                method="POST"
+              >
 
-                    <input
-                        type="text"
-                        placeholder="Full Name"
-                    />
+                {/* Name */}
 
-                    <input
-                        type="email"
-                        placeholder="Email Address"
-                    />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name"
+                  required
+                />
 
-                    <input
-                        type="text"
-                        placeholder="Subject"
-                    />
+                {/* Email */}
 
-                    <textarea
-                        rows="6"
-                        placeholder="Your Message"
-                    ></textarea>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                />
 
-                    <button type="submit">
-                        Send Message
-                    </button>
+                {/* Subject */}
 
-                </form>
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Subject"
+                  required
+                />
+
+                {/* Message */}
+
+                <textarea
+                  name="message"
+                  rows="6"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+
+                {/* Optional Formspree settings */}
+
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value="New Contact Message - Elevara Legacy"
+                />
+
+                <button type="submit">
+                  Send Message
+                </button>
+
+              </form>
 
             </div>
 
+          </div>
+
         </div>
+      </section>
 
-    </div>
+      {/* =========================
+          SOCIAL MEDIA
+      ========================= */}
 
-</section>
+      <section className="social-connect">
 
-{/* Social Media */}
+        <div className="contact-container">
 
-<section className="social-connect">
-
-    <div className="contact-container">
-
-        <span className="section-tag">
+          <span className="section-tag">
             Stay Connected
-        </span>
+          </span>
 
-        <h2>
+          <h2>
             Follow Our Journey
-        </h2>
+          </h2>
 
-        <p>
-            Stay inspired by following Elevara Legacy on social media. Discover
-            upcoming events, empowering stories, leadership insights and
-            opportunities to connect with our growing community.
-        </p>
+          <p>
+            Stay inspired by following Elevara Legacy on social
+            media. Discover upcoming events, empowering stories,
+            leadership insights and opportunities to connect with
+            our growing community.
+          </p>
 
-        <div className="social-grid">
+          <div className="social-grid">
 
-            <a
-                href="https://facebook.com/your-page"
-                className="social-card"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <FaFacebookF />
-                <h3>Facebook</h3>
-                <span>Join our community</span>
-            </a>
+            {/* Facebook */}
 
             <a
-                href="https://instagram.com/your-profile"
-                className="social-card"
-                target="_blank"
-                rel="noopener noreferrer"
+              href="https://facebook.com/your-page"
+              className="social-card"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-                <FaInstagram />
-                <h3>Instagram</h3>
-                <span>Daily inspiration</span>
+              <FaFacebookF />
+
+              <h3>Facebook</h3>
+
+              <span>
+                Join our community
+              </span>
             </a>
 
+            {/* Instagram */}
+
             <a
-                href="https://linkedin.com/company/your-company"
-                className="social-card"
-                target="_blank"
-                rel="noopener noreferrer"
+              href="https://instagram.com/your-profile"
+              className="social-card"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-                <FaLinkedinIn />
-                <h3>LinkedIn</h3>
-                <span>Professional network</span>
+              <FaInstagram />
+
+              <h3>Instagram</h3>
+
+              <span>
+                Daily inspiration
+              </span>
             </a>
-              {/* WhatsApp Channel */}
+
+            {/* LinkedIn */}
+
+            <a
+              href="https://linkedin.com/company/your-company"
+              className="social-card"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedinIn />
+
+              <h3>LinkedIn</h3>
+
+              <span>
+                Professional network
+              </span>
+            </a>
+
+            {/* WhatsApp */}
 
             <a
               href="YOUR_WHATSAPP_CHANNEL_LINK"
@@ -232,67 +291,77 @@ function Contact() {
               <span>
                 Join our channel
               </span>
-
             </a>
+
+            {/* YouTube */}
 
             <a
-                href="https://youtube.com/@your-channel"
-                className="social-card"
-                target="_blank"
-                rel="noopener noreferrer"
+              href="https://youtube.com/@your-channel"
+              className="social-card"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-                <FaYoutube />
-                <h3>YouTube</h3>
-                <span>Watch our stories</span>
+              <FaYoutube />
+
+              <h3>
+                YouTube
+              </h3>
+
+              <span>
+                Watch our stories
+              </span>
             </a>
+
+          </div>
 
         </div>
 
-    </div>
+      </section>
 
-</section>
-{/* Final CTA */}
+      {/* =========================
+          FINAL CTA
+      ========================= */}
 
-<section className="contact-cta">
+      <section className="contact-cta">
 
-    <div className="contact-container">
+        <div className="contact-container">
 
-        <span className="section-tag">
+          <span className="section-tag">
             Join the Movement
-        </span>
+          </span>
 
-        <h2>
+          <h2>
             Together, We Can Build a Legacy of Empowered Women
-        </h2>
+          </h2>
 
-        <p>
-            Every conversation begins with a single step. Whether you're looking
-            to join our community, partner with us, volunteer, or support our
-            mission, we'd love to connect and make a lasting impact together.
-        </p>
+          <p>
+            Every conversation begins with a single step. Whether
+            you're looking to join our community, partner with us,
+            volunteer, or support our mission, we'd love to connect
+            and make a lasting impact together.
+          </p>
 
-        <div className="contact-cta-buttons">
+          <div className="contact-cta-buttons">
 
             <a
-                href="/community"
-                className="primary-btn"
+              href="/community"
+              className="primary-btn"
             >
-                Become a Member
+              Become a Member
             </a>
 
             <a
-                href="/programs"
-                className="secondary-btn"
+              href="/programs"
+              className="secondary-btn"
             >
-                Explore Our Programs
+              Explore Our Programs
             </a>
+
+          </div>
 
         </div>
 
-    </div>
-
-</section>
-
+      </section>
     </>
   );
 }
