@@ -1,20 +1,58 @@
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import "../styles/events-page.css";
+import { supabase } from "../lib/supabase";
 
 function Events() {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    fetchEvents();
+  }, []);
+
+  const fetchEvents = async () => {
+    const { data, error } = await supabase
+      .from("events")
+      .select("*")
+      .order("date", { ascending: true });
+
+    if (error) {
+      console.error("Events error:", error);
+      setError("Unable to load events.");
+    } else {
+      setEvents(data || []);
+    }
+
+    setLoading(false);
+  };
+
+  const formatDate = (date) => {
+    const eventDate = new Date(date);
+
+    return {
+      day: eventDate.getDate(),
+      month: eventDate
+        .toLocaleString("en-US", { month: "short" })
+        .toUpperCase(),
+    };
+  };
+
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Events | Elevara Legacy</title>
+
         <meta
-            name="description"
-            content="Discover workshops, conferences, networking sessions and community initiatives designed to empower women, build meaningful connections and create lasting impact."
+          name="description"
+          content="Discover workshops, conferences, networking sessions and community initiatives designed to empower women, build meaningful connections and create lasting impact."
         />
-    </Helmet>
+      </Helmet>
+
       {/* Hero */}
 
       <section className="events-hero">
-
         <div className="events-container">
 
           <span className="section-tag">
@@ -26,124 +64,221 @@ function Events() {
           </h1>
 
           <p>
-            Discover workshops, conferences, networking sessions and community
-            initiatives designed to empower women, build meaningful connections
-            and create lasting impact.
+            Discover workshops, conferences, networking sessions and
+            community initiatives designed to empower women, build
+            meaningful connections and create lasting impact.
           </p>
+
+        </div>
+      </section>
+
+      {/* Upcoming Events */}
+
+      <section
+        className="featured-event"
+        id="upcoming-events"
+      >
+
+        <div className="events-container">
+
+          <div className="section-header">
+
+            <span className="section-tag">
+              Upcoming Events
+            </span>
+
+            <h2>
+              Be Part of Something Meaningful
+            </h2>
+
+            <p>
+              Explore our upcoming events and join us for opportunities
+              to learn, connect, grow and create lasting impact.
+            </p>
+
+          </div>
+
+          {/* Loading */}
+
+          {loading && (
+            <div className="events-status">
+              <p>Loading upcoming events...</p>
+            </div>
+          )}
+
+          {/* Error */}
+
+          {!loading && error && (
+            <div className="events-status">
+              <p>{error}</p>
+            </div>
+          )}
+
+          {/* No Events */}
+
+          {!loading && !error && events.length === 0 && (
+            <div className="events-status">
+              <p>
+                There are currently no upcoming events.
+                Check back soon for new opportunities.
+              </p>
+            </div>
+          )}
+
+          {/* Events */}
+
+          {!loading && !error && events.length > 0 && (
+
+            <div className="events-list">
+
+              {events.map((event) => {
+
+                const formattedDate = formatDate(event.date);
+
+                return (
+                  <div
+                    className="featured-event-grid"
+                    key={event.id}
+                  >
+
+                    {/* Event Image */}
+
+                    <div className="featured-event-image">
+
+                      {event.image_url ? (
+                        <img
+                          src={event.image_url}
+                          alt={event.title}
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="event-image-placeholder">
+                          <span>Elevara Legacy</span>
+                        </div>
+                      )}
+
+                      <div className="event-date">
+
+                        <span>
+                          {formattedDate.day}
+                        </span>
+
+                        <small>
+                          {formattedDate.month}
+                        </small>
+
+                      </div>
+
+                    </div>
+
+                    {/* Event Content */}
+
+                    <div className="featured-event-content">
+
+                      <span className="section-tag">
+                        Upcoming Event
+                      </span>
+
+                      <h2>
+                        {event.title}
+                      </h2>
+
+                      <p>
+                        {event.description}
+                      </p>
+
+                      <div className="event-details">
+
+                        {event.location && (
+                          <div className="event-detail">
+                            📍 {event.location}
+                          </div>
+                        )}
+
+                        {event.time && (
+                          <div className="event-detail">
+                            🕘 {event.time}
+                          </div>
+                        )}
+
+                      </div>
+
+                      <div className="event-buttons">
+
+                        {event.registration_url ? (
+                          <a
+                            href={event.registration_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="primary-btn"
+                          >
+                            Register Now
+                          </a>
+                        ) : (
+                          <a
+                            href="/contact"
+                            className="primary-btn"
+                          >
+                            Register Now
+                          </a>
+                        )}
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                );
+              })}
+
+            </div>
+          )}
 
         </div>
 
       </section>
-      {/* Featured Event */}
 
-<section className="featured-event">
+      {/* Events CTA */}
 
-    <div className="events-container">
+      <section className="events-cta">
 
-        <div className="featured-event-grid">
+        <div className="events-container">
 
-            <div className="featured-event-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80"
-                    alt="Women Leadership Summit"
-                />
-
-                <div className="event-date">
-
-                    <span>15</span>
-
-                    <small>SEP</small>
-
-                </div>
-
-            </div>
-
-            <div className="featured-event-content">
-
-                <span className="section-tag">
-                    Featured Event
-                </span>
-
-                <h2>
-                    Women Leadership & Business Summit 2026
-                </h2>
-
-                <p>
-                    Join inspiring women leaders, entrepreneurs and professionals
-                    for a day of learning, networking and collaboration. Gain
-                    practical insights, connect with mentors and leave inspired
-                    to make a greater impact.
-                </p>
-
-                <div className="event-details">
-
-                    <div className="event-detail">
-                        📍 Nairobi, Kenya
-                    </div>
-
-                    <div className="event-detail">
-                        🕘 9:00 AM – 4:00 PM
-                    </div>
-
-                    <div className="event-detail">
-                        👥 300 Participants
-                    </div>
-
-                </div>
-
-                <div className="event-buttons">
-
-                    <a href="/contact" className="primary-btn">
-                        Register Now
-                    </a>
-
-                    <a href="#upcoming-events" className="secondary-btn">
-                        View All Events
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-{/* Events CTA */}
-
-<section className="events-cta">
-
-    <div className="events-container">
-
-        <span className="section-tag">
+          <span className="section-tag">
             Join Us
-        </span>
+          </span>
 
-        <h2>
+          <h2>
             Be Part of Our Next Inspiring Event
-        </h2>
+          </h2>
 
-        <p>
-            Every event is an opportunity to learn, connect and grow. Join a community of women who are passionate about leadership, entrepreneurship and creating lasting impact.
-        </p>
+          <p>
+            Every event is an opportunity to learn, connect and grow.
+            Join a community of women who are passionate about
+            leadership, entrepreneurship and creating lasting impact.
+          </p>
 
-        <div className="events-cta-buttons">
+          <div className="events-cta-buttons">
 
-            <a href="/contact" className="primary-btn">
-                Register Now
+            <a
+              href="/contact"
+              className="primary-btn"
+            >
+              Register Now
             </a>
 
-            <a href="/community" className="secondary-btn">
-                Join Our Community
+            <a
+              href="/community"
+              className="secondary-btn"
+            >
+              Join Our Community
             </a>
+
+          </div>
 
         </div>
 
-    </div>
-
-</section>
+      </section>
 
     </>
   );
