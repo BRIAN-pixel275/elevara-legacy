@@ -1,0 +1,146 @@
+.admin-dashboard {
+  min-height: 80vh;
+  padding: 100px 40px;
+  background: #F9F5EF;
+}
+
+.admin-dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* Header */
+
+.admin-dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.admin-dashboard-header h1 {
+  font-size: 48px;
+  color: #2C2C2C;
+  margin: 20px 0 10px;
+}
+
+.admin-dashboard-header p {
+  color: #666;
+  font-size: 17px;
+}
+
+
+/* Logout */
+
+.admin-logout-btn {
+  border: 2px solid #C9A227;
+  background: transparent;
+  color: #C9A227;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.admin-logout-btn:hover {
+  background: #C9A227;
+  color: white;
+}
+
+
+/* Dashboard Grid */
+
+.admin-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+
+/* Cards */
+
+.admin-card {
+  background: white;
+  padding: 45px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .06);
+  transition: .3s;
+}
+
+.admin-card:hover {
+  transform: translateY(-5px);
+}
+
+.admin-card-icon {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F9F5EF;
+  border-radius: 18px;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.admin-card h2 {
+  font-size: 30px;
+  color: #2C2C2C;
+  margin-bottom: 15px;
+}
+
+.admin-card p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+
+/* Card Button */
+
+.admin-card-btn {
+  border: none;
+  background: #C9A227;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.admin-card-btn:hover {
+  background: #B8860B;
+  transform: translateY(-2px);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .admin-dashboard {
+    padding: 70px 25px;
+  }
+
+  .admin-dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .admin-dashboard-header h1 {
+    font-size: 38px;
+  }
+
+  .admin-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-card {
+    padding: 35px 25px;
+  }
+
+}

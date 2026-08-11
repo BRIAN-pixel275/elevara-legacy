@@ -1,0 +1,250 @@
+.admin-gallery {
+  min-height: 80vh;
+  padding: 100px 40px;
+  background: #F9F5EF;
+}
+
+.admin-gallery-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+/* Header */
+
+.admin-gallery-header {
+  margin-bottom: 50px;
+}
+
+.admin-gallery-header h1 {
+  font-size: 48px;
+  color: #2C2C2C;
+  margin: 20px 0 10px;
+}
+
+.admin-gallery-header p {
+  color: #666;
+  font-size: 17px;
+}
+
+
+/* Upload Card */
+
+.gallery-upload-card {
+  background: white;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .06);
+  margin-bottom: 60px;
+}
+
+.gallery-upload-card h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #2C2C2C;
+}
+
+
+/* Form */
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2C2C2C;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #C9A227;
+}
+
+
+/* Upload Button */
+
+.admin-upload-btn {
+  border: none;
+  background: #C9A227;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.admin-upload-btn:hover {
+  background: #B8860B;
+  transform: translateY(-2px);
+}
+
+.admin-upload-btn:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* Message */
+
+.admin-gallery-message {
+  margin-top: 20px;
+  color: #C9A227;
+  font-weight: 600;
+}
+
+
+/* Gallery Header */
+
+.admin-gallery-list {
+  margin-top: 40px;
+}
+
+.admin-gallery-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.admin-gallery-list-header h2 {
+  font-size: 32px;
+  color: #2C2C2C;
+}
+
+.admin-gallery-list-header span {
+  color: #666;
+}
+
+
+/* Gallery Grid */
+
+.admin-gallery-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+/* Gallery Card */
+
+.admin-gallery-item {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, .06);
+}
+
+.admin-gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.admin-gallery-item-content {
+  padding: 20px;
+}
+
+.admin-gallery-item-content h3 {
+  font-size: 18px;
+  color: #2C2C2C;
+  margin-bottom: 8px;
+}
+
+.admin-gallery-item-content span {
+  display: block;
+  color: #C9A227;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+
+/* Delete */
+
+.delete-gallery-btn {
+  border: none;
+  background: #f5eeee;
+  color: #b42318;
+  padding: 9px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.delete-gallery-btn:hover {
+  background: #b42318;
+  color: white;
+}
+
+
+/* Status */
+
+.gallery-status {
+  color: #666;
+  text-align: center;
+  padding: 50px;
+  background: white;
+  border-radius: 20px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+  .admin-gallery {
+    padding: 70px 25px;
+  }
+
+  .admin-gallery-header h1 {
+    font-size: 38px;
+  }
+
+  .admin-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .admin-gallery {
+    padding: 60px 20px;
+  }
+
+  .gallery-upload-card {
+    padding: 25px;
+  }
+
+  .admin-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-gallery-list-header {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+}
