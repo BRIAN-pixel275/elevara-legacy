@@ -1,6 +1,7 @@
 import AdminLogin from "./pages/AdminLogin";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminGallery from "./pages/AdminGallery";
+import AdminEvents from "./pages/AdminEvents";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import MainLayout from "./layouts/MainLayout";
@@ -26,7 +27,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin-login" element={<AdminLogin />} />
           <Route path="/admin" element={<AdminDashboard />} />
-          <Route path="/admin/gallery" element={<AdminGallery />} />
+          <Route path="/admin/gallery" element={<AdminGallery />}/>
+           <Route path="/admin/events" element={<AdminEvents />}/>
 
           {/* 404 Not Found Route */}
           <Route path="*" element={<NotFound />} />

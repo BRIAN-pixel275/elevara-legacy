@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
-import "../styles/events-page.css";
 import { supabase } from "../lib/supabase";
+import "../styles/events-page.css";
 
 function Events() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+  // =========================
+  // FETCH EVENTS
+  // =========================
+
   useEffect(() => {
     fetchEvents();
   }, []);
 
   const fetchEvents = async () => {
+    setLoading(true);
+    setError("");
+
     const { data, error } = await supabase
       .from("events")
       .select("*")
@@ -28,13 +35,19 @@ function Events() {
     setLoading(false);
   };
 
+  // =========================
+  // FORMAT DATE
+  // =========================
+
   const formatDate = (date) => {
     const eventDate = new Date(date);
 
     return {
       day: eventDate.getDate(),
       month: eventDate
-        .toLocaleString("en-US", { month: "short" })
+        .toLocaleString("en-US", {
+          month: "short",
+        })
         .toUpperCase(),
     };
   };
@@ -50,7 +63,9 @@ function Events() {
         />
       </Helmet>
 
-      {/* Hero */}
+      {/* ===================================
+          Events Hero
+      =================================== */}
 
       <section className="events-hero">
         <div className="events-container">
@@ -72,13 +87,14 @@ function Events() {
         </div>
       </section>
 
-      {/* Upcoming Events */}
+      {/* ===================================
+          Upcoming Events
+      =================================== */}
 
       <section
         className="featured-event"
         id="upcoming-events"
       >
-
         <div className="events-container">
 
           <div className="section-header">
@@ -102,7 +118,9 @@ function Events() {
 
           {loading && (
             <div className="events-status">
-              <p>Loading upcoming events...</p>
+              <p>
+                Loading upcoming events...
+              </p>
             </div>
           )}
 
@@ -110,135 +128,169 @@ function Events() {
 
           {!loading && error && (
             <div className="events-status">
-              <p>{error}</p>
+              <p>
+                {error}
+              </p>
             </div>
           )}
 
           {/* No Events */}
 
-          {!loading && !error && events.length === 0 && (
-            <div className="events-status">
-              <p>
-                There are currently no upcoming events.
-                Check back soon for new opportunities.
-              </p>
-            </div>
-          )}
+          {!loading &&
+            !error &&
+            events.length === 0 && (
+              <div className="events-status">
+
+                <p>
+                  There are currently no upcoming events.
+                  Check back soon for new opportunities.
+                </p>
+
+              </div>
+            )}
 
           {/* Events */}
 
-          {!loading && !error && events.length > 0 && (
+          {!loading &&
+            !error &&
+            events.length > 0 && (
 
-            <div className="events-list">
+              <div className="events-list">
 
-              {events.map((event) => {
+                {events.map((event) => {
 
-                const formattedDate = formatDate(event.date);
+                  const formattedDate =
+                    formatDate(event.date);
 
-                return (
-                  <div
-                    className="featured-event-grid"
-                    key={event.id}
-                  >
+                  return (
+                    <div
+                      className="featured-event-grid"
+                      key={event.id}
+                    >
 
-                    {/* Event Image */}
+                      {/* ===================================
+                          Event Image
+                      =================================== */}
 
-                    <div className="featured-event-image">
+                      <div className="featured-event-image">
 
-                      {event.image_url ? (
-                        <img
-                          src={event.image_url}
-                          alt={event.title}
-                          loading="lazy"
-                        />
-                      ) : (
-                        <div className="event-image-placeholder">
-                          <span>Elevara Legacy</span>
+                        {event.image_url ? (
+
+                          <img
+                            src={event.image_url}
+                            alt={event.title}
+                            loading="lazy"
+                          />
+
+                        ) : (
+
+                          <div className="event-image-placeholder">
+
+                            <span>
+                              Elevara Legacy
+                            </span>
+
+                          </div>
+
+                        )}
+
+                        {/* Date */}
+
+                        <div className="event-date">
+
+                          <span>
+                            {formattedDate.day}
+                          </span>
+
+                          <small>
+                            {formattedDate.month}
+                          </small>
+
                         </div>
-                      )}
 
-                      <div className="event-date">
+                      </div>
 
-                        <span>
-                          {formattedDate.day}
+                      {/* ===================================
+                          Event Content
+                      =================================== */}
+
+                      <div className="featured-event-content">
+
+                        <span className="section-tag">
+                          Upcoming Event
                         </span>
 
-                        <small>
-                          {formattedDate.month}
-                        </small>
+                        <h2>
+                          {event.title}
+                        </h2>
+
+                        {event.description && (
+                          <p>
+                            {event.description}
+                          </p>
+                        )}
+
+                        {/* Event Details */}
+
+                        <div className="event-details">
+
+                          {event.location && (
+                            <div className="event-detail">
+                              📍 {event.location}
+                            </div>
+                          )}
+
+                          {event.time && (
+                            <div className="event-detail">
+                              🕘 {event.time}
+                            </div>
+                          )}
+
+                        </div>
+
+                        {/* Event Button */}
+
+                        <div className="event-buttons">
+
+                          {event.registration_url ? (
+
+                            <a
+                              href={event.registration_url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="primary-btn"
+                            >
+                              Register Now
+                            </a>
+
+                          ) : (
+
+                            <a
+                              href="/contact"
+                              className="primary-btn"
+                            >
+                              Register Now
+                            </a>
+
+                          )}
+
+                        </div>
 
                       </div>
 
                     </div>
+                  );
+                })}
 
-                    {/* Event Content */}
-
-                    <div className="featured-event-content">
-
-                      <span className="section-tag">
-                        Upcoming Event
-                      </span>
-
-                      <h2>
-                        {event.title}
-                      </h2>
-
-                      <p>
-                        {event.description}
-                      </p>
-
-                      <div className="event-details">
-
-                        {event.location && (
-                          <div className="event-detail">
-                            📍 {event.location}
-                          </div>
-                        )}
-
-                        {event.time && (
-                          <div className="event-detail">
-                            🕘 {event.time}
-                          </div>
-                        )}
-
-                      </div>
-
-                      <div className="event-buttons">
-
-                        {event.registration_url ? (
-                          <a
-                            href={event.registration_url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="primary-btn"
-                          >
-                            Register Now
-                          </a>
-                        ) : (
-                          <a
-                            href="/contact"
-                            className="primary-btn"
-                          >
-                            Register Now
-                          </a>
-                        )}
-
-                      </div>
-
-                    </div>
-
-                  </div>
-                );
-              })}
-
-            </div>
-          )}
+              </div>
+            )}
 
         </div>
-
       </section>
 
-      {/* Events CTA */}
+      {/* ===================================
+          Events CTA
+      =================================== */}
 
       <section className="events-cta">
 
@@ -279,7 +331,6 @@ function Events() {
         </div>
 
       </section>
-
     </>
   );
 }

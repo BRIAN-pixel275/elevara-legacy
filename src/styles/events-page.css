@@ -84,7 +84,7 @@
 
     grid-template-columns:1fr 1fr;
 
-    gap:60px;
+    gap:64px;
 
     align-items:center;
 
@@ -199,6 +199,9 @@
     font-weight:500;
 
 }
+.events-list .featured-event-grid {
+    width: 100%;
+}
 
 .event-buttons{
 
@@ -240,6 +243,20 @@
 
 }
 
+}
+@media (max-width: 768px) {
+    .featured-event-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .events-list {
+        gap: 60px;
+    }
+
+    .featured-event-image {
+        min-height: 350px;
+    }
 }
 
 /* ===================================
@@ -346,7 +363,9 @@
 }
 
 .events-list {
-    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
 }
 
 .event-image-placeholder {

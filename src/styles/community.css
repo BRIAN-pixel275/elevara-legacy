@@ -573,6 +573,14 @@
     color: #666;
     font-size: 16px;
 }
+.gallery-event {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #C9A227;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
 
 /* ===================================
    Join Community CTA
