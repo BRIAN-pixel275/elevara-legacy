@@ -1,3 +1,4 @@
+import GallerySection from "../components/sections/GallerySection";
 import { Helmet } from "react-helmet-async";
 import "../styles/community.css";
 import {
@@ -11,10 +12,7 @@ import collaboration from "../assets/images/collaboration.jpg";
 import growth from "../assets/images/growth.jpg";
 import legacy from "../assets/images/legacy.jpg";
 import {
-  FaUserPlus,
-  FaBookOpen,
   FaHandsHelping,
-  FaTrophy,
 } from "react-icons/fa";
 import {
   FaChalkboardTeacher,
@@ -388,112 +386,7 @@ function Community() {
 </section>
 {/* Community Gallery */}
 
-<section className="community-gallery">
-
-    <div className="community-container">
-
-        <div className="section-header">
-
-            <span className="section-tag">
-                Gallery
-            </span>
-
-            <h2>
-                Moments That Inspire
-            </h2>
-
-            <p>
-                Explore highlights from our workshops, mentorship sessions,
-                networking events and community outreach initiatives.
-            </p>
-
-        </div>
-
-        <div className="gallery-grid">
-
-            <div className="gallery-item">
-
-                <img
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
-                    alt="Leadership Workshop"
-                />
-
-                <div className="gallery-overlay">
-                    <h3>Leadership Workshop</h3>
-                </div>
-
-            </div>
-
-            <div className="gallery-item">
-
-                <img
-                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80"
-                    alt="Networking Event"
-                />
-
-                <div className="gallery-overlay">
-                    <h3>Networking Event</h3>
-                </div>
-
-            </div>
-
-            <div className="gallery-item">
-
-                <img
-                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80"
-                    alt="Digital Skills Training"
-                />
-
-                <div className="gallery-overlay">
-                    <h3>Digital Skills Training</h3>
-                </div>
-
-            </div>
-
-            <div className="gallery-item">
-
-                <img
-                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80"
-                    alt="Mentorship Session"
-                />
-
-                <div className="gallery-overlay">
-                    <h3>Mentorship Session</h3>
-                </div>
-
-            </div>
-
-            <div className="gallery-item">
-
-                <img
-                    src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=900&q=80"
-                    alt="Community Outreach"
-                />
-
-                <div className="gallery-overlay">
-                    <h3>Community Outreach</h3>
-                </div>
-
-            </div>
-
-            <div className="gallery-item">
-
-                <img
-                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=80"
-                    alt="Women in Business"
-                />
-
-                <div className="gallery-overlay">
-                    <h3>Women in Business</h3>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
+<GallerySection />
 {/* Join Community CTA */}
 
 <section className="join-community">
