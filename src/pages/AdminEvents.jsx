@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import "../styles/admin-events.css";
 
 function AdminEvents() {
   const [events, setEvents] = useState([]);
+  const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -122,6 +124,33 @@ function AdminEvents() {
     <section className="admin-events">
 
       <div className="admin-events-container">
+
+                {/* ADMIN NAVIGATION */}
+
+        <div className="admin-navigation">
+
+          <button
+            onClick={() => navigate("/admin")}
+            className="admin-nav-btn"
+          >
+            ← Dashboard
+          </button>
+
+          <button
+            onClick={() => navigate("/admin/events")}
+            className="admin-nav-btn active"
+          >
+             Events
+          </button>
+
+          <button
+            onClick={() => navigate("/admin/gallery")}
+            className="admin-nav-btn"
+          >
+             Gallery
+          </button>
+
+        </div>
 
         {/* =========================
             HEADER

@@ -336,3 +336,61 @@
         font-size: 23px;
     }
 }
+/* =========================
+   ADMIN NAVIGATION
+========================= */
+
+.admin-navigation {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.admin-nav-btn {
+  border: none;
+  background: #ffffff;
+  color: #2c2c2c;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.admin-nav-btn:hover {
+  transform: translateY(-2px);
+}
+
+.admin-nav-btn.active {
+  background: #2c2c2c;
+  color: #ffffff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .admin-navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .admin-nav-btn:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .admin-nav-btn {
+    width: 100%;
+    padding: 13px 10px;
+    font-size: 13px;
+  }
+
+}

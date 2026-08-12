@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabase";
 import "../styles/admin-gallery.css";
 
 function AdminGallery() {
+  const navigate = useNavigate();
 
   const [images, setImages] = useState([]);
   const [events, setEvents] = useState([]);
@@ -261,24 +263,42 @@ function AdminGallery() {
 
         {/* Header */}
 
-        <div className="admin-gallery-header">
+      <div className="admin-gallery-header">
+  <div>
+    <span className="section-tag">
+      Elevara Legacy
+    </span>
 
-          <div>
+    <h1>Gallery Management</h1>
 
-            <span className="section-tag">
-              Elevara Legacy
-            </span>
+    <p>
+      Upload and manage photos from Elevara Legacy
+      events and activities.
+    </p>
+  </div>
 
-            <h1>Gallery Management</h1>
+  <div className="admin-page-navigation">
+    <button
+      onClick={() => navigate("/admin")}
+      className="admin-nav-btn"
+    >
+      ← Dashboard
+    </button>
 
-            <p>
-              Upload and manage photos from Elevara Legacy
-              events and activities.
-            </p>
+    <button
+      onClick={() => navigate("/admin/events")}
+      className="admin-nav-btn"
+    >
+       Events
+    </button>
 
-          </div>
-
-        </div>
+    <button
+      className="admin-nav-btn active"
+    >
+       Gallery
+    </button>
+  </div>
+</div>
 
 
         {/* Upload Form */}
