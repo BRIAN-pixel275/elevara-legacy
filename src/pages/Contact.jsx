@@ -10,7 +10,6 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
-  FaYoutube,
 } from "react-icons/fa";
 
 function Contact() {
@@ -226,7 +225,7 @@ function Contact() {
             {/* Facebook */}
 
             <a
-              href="https://facebook.com/your-page"
+              href="https://facebook.com/elevara legacy"
               className="social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -243,7 +242,7 @@ function Contact() {
             {/* Instagram */}
 
             <a
-              href="https://instagram.com/your-profile"
+              href="https://instagram.com/elevara_legacy"
               className="social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -260,7 +259,7 @@ function Contact() {
             {/* LinkedIn */}
 
             <a
-              href="https://linkedin.com/company/your-company"
+              href="https://www.linkedin.com/in/elevara-legacy-05565b429/"
               className="social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -277,7 +276,7 @@ function Contact() {
             {/* WhatsApp */}
 
             <a
-              href="YOUR_WHATSAPP_CHANNEL_LINK"
+              href="https://whatsapp.com/channel/0029VbDD3rx6LwHtCPmxyJ38"
               className="social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -293,24 +292,7 @@ function Contact() {
               </span>
             </a>
 
-            {/* YouTube */}
-
-            <a
-              href="https://youtube.com/@your-channel"
-              className="social-card"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaYoutube />
-
-              <h3>
-                YouTube
-              </h3>
-
-              <span>
-                Watch our stories
-              </span>
-            </a>
+          
 
           </div>
 
