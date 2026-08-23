@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import elevaraImage from "../../assets/images/elevara.jpg";
+
 function Hero() {
   return (
     <section className="hero">
@@ -25,31 +27,29 @@ function Hero() {
 
           <div className="hero-buttons">
 
-             <Link
-               to="/community"
-               className="primary-btn"
+            <Link
+              to="/community"
+              className="primary-btn"
             >
-                Join the Community
-              </Link>
+              Join the Community
+            </Link>
 
-                <Link
-                 to="/about"
-                 className="secondary-btn"
-                  >
-                      Learn More
-                       </Link>
+            <Link
+              to="/about"
+              className="secondary-btn"
+            >
+              Learn More
+            </Link>
 
-              </div>
+          </div>
 
         </div>
 
         <div className="hero-image">
-
           <img
-            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=900"
-            alt="Women Leaders"
+            src={elevaraImage}
+            alt="Empowered women leaders"
           />
-
         </div>
 
       </div>
