@@ -72,15 +72,15 @@ function Footer() {
 
             <div className="socials">
 
-              <a href="#">
+              <a href="https://www.facebook.com/profile.php?id=61593393921680">
                 <FaFacebookF />
               </a>
 
-              <a href="#">
+              <a href="https://www.instagram.com/elevara.legacy/">
                 <FaInstagram />
               </a>
 
-              <a href="#">
+              <a href="https://www.linkedin.com/in/elevara-legacy-05565b429/">
                 <FaLinkedinIn />
               </a>
 

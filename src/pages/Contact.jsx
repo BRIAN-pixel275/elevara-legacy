@@ -225,7 +225,7 @@ function Contact() {
             {/* Facebook */}
 
             <a
-              href="https://facebook.com/elevara legacy"
+              href="https://www.facebook.com/profile.php?id=61593393921680"
               className="social-card"
               target="_blank"
               rel="noopener noreferrer"
@@ -242,7 +242,7 @@ function Contact() {
             {/* Instagram */}
 
             <a
-              href="https://instagram.com/elevara_legacy"
+              href="https://www.instagram.com/elevara.legacy/"
               className="social-card"
               target="_blank"
               rel="noopener noreferrer"
