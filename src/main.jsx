@@ -1,15 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import { HelmetProvider } from "react-helmet-async";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { HelmetProvider } from "react-helmet-async";
-
 import "./index.css";
-import "./styles/navbar.css";  
-import "./styles/hero.css"; 
+import "./styles/navbar.css";
+import "./styles/hero.css";
 import "./styles/about.css";
 import "./styles/pillars.css";
 import "./styles/programspage.css";
@@ -26,8 +25,6 @@ import "./styles/contact.css";
 import "./styles/scrollTop.css";
 import "./styles/notfound.css";
 
-
-
 AOS.init({
   duration: 1000,
   once: true,
@@ -36,12 +33,8 @@ AOS.init({
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
   </React.StrictMode>
 );
-
-<React.StrictMode>
-    <HelmetProvider>
-        <App />
-    </HelmetProvider>
-</React.StrictMode>
