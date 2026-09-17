@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 import "../styles/contact.css";
 
 import {
@@ -15,14 +15,11 @@ import {
 function Contact() {
   return (
     <>
-      <Helmet>
-        <title>Contact Us | Elevara Legacy</title>
-
-        <meta
-          name="description"
-          content="Get in touch with Elevara Legacy. Have questions, want to partner with us, or need more information? We're here to help."
-        />
-      </Helmet>
+      <SEO
+        title="Contact Elevara Legacy | Get Involved"
+        description="Contact Elevara Legacy to learn more about our women empowerment programs, partnerships, volunteering opportunities and community initiatives."
+        path="/contact"
+      />
 
       {/* =========================
           HERO
@@ -291,8 +288,6 @@ function Contact() {
                 Join our channel
               </span>
             </a>
-
-          
 
           </div>
 

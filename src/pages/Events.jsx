@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Helmet } from "react-helmet-async";
+import SEO from "../components/SEO";
 import { supabase } from "../lib/supabase";
 import "../styles/events-page.css";
 
@@ -54,14 +54,11 @@ function Events() {
 
   return (
     <>
-      <Helmet>
-        <title>Events | Elevara Legacy</title>
-
-        <meta
-          name="description"
-          content="Discover workshops, conferences, networking sessions and community initiatives designed to empower women, build meaningful connections and create lasting impact."
-        />
-      </Helmet>
+      <SEO
+        title="Events & Opportunities | Elevara Legacy"
+        description="Discover Elevara Legacy workshops, conferences, networking sessions and community initiatives that create opportunities to learn, connect, grow and make a lasting impact."
+        path="/events"
+      />
 
       {/* ===================================
           Events Hero
