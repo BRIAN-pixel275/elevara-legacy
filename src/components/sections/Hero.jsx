@@ -13,10 +13,10 @@ function Hero() {
           </span>
 
           <h1>
-            Empowering Women to
-            <span> Grow, Lead, Invest </span>
-            and Build Lasting Legacies.
-          </h1>
+  Elevara Legacy:
+  <span> Empowering Women to Grow & Lead </span>
+  and Build Lasting Legacies.
+</h1>
 
           <p>
             Elevara Legacy equips women with the knowledge,
