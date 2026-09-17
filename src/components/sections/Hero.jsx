@@ -14,7 +14,7 @@ function Hero() {
 
           <h1>
   Elevara Legacy:
-  <span> Empowering Women to Grow & Lead </span>
+  <span> Empowering Women to Grow , Lead </span>
   and Build Lasting Legacies.
 </h1>
 
