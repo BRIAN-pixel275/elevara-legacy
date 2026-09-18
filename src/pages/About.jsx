@@ -69,11 +69,7 @@ function About() {
             </p>
 
             <p>
-              Elevara Legacy was created to provide
-              women with access to mentorship,
-              financial education, leadership
-              development and entrepreneurship
-              opportunities.
+      Elevara Legacy is built on the belief that a woman’s potential should never be limited by her circumstances. With the right knowledge, skills, confidence, and opportunities, women can transform their lives, shape their futures, and create meaningful impact that extends far beyond themselve
             </p>
           </div>
         </div>
@@ -109,9 +105,11 @@ function About() {
               <p>
 
 To empower women with the knowledge, skills, confidence, and opportunities they need to transform their lives, build financial independence, lead with purpose, and create lasting impact.
+</p>
 
-We are committed to creating practical resources, meaningful opportunities, and empowering experiences that help women move from potential to progress—and from progress to lasting prosperity
-              </p>
+<p>
+  We are committed to creating practical resources, meaningful opportunities, and empowering experiences that help women move from potential to progress—and from progress to lasting prosperity.
+</p>
             </div>
 
             <div className="purpose-card">
@@ -125,8 +123,9 @@ We are committed to creating practical resources, meaningful opportunities, and 
                 To build a world where every woman recognizes
                 her worth, unlocks her full potential,
                 achieves financial independence and leads
-                with confidence.
+                with confidence, purpose, and vision.
               </p>
+              <p> We envision a future where women are equipped to make informed decisions, create opportunities, build wealth, lead boldly, and leave a legacy that strengthens the generations that follow.</p>
             </div>
           </div>
         </div>
