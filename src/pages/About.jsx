@@ -107,10 +107,10 @@ function About() {
               <h3>Our Mission</h3>
 
               <p>
-                Elevara Legacy exists to empower women with
-                the knowledge, skills, confidence and
-                opportunities they need to transform their
-                lives and achieve lasting success.
+
+To empower women with the knowledge, skills, confidence, and opportunities they need to transform their lives, build financial independence, lead with purpose, and create lasting impact.
+
+We are committed to creating practical resources, meaningful opportunities, and empowering experiences that help women move from potential to progress—and from progress to lasting prosperity
               </p>
             </div>
 
