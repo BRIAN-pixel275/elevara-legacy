@@ -10,7 +10,7 @@ The website features a clean, elegant design with a focus on accessibility, resp
 
 
 ```
-https://elevaralegacy.vercel.app
+https://www.elevaralegacy.com/
 ```
 
 ---
